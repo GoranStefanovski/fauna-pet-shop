@@ -23,8 +23,9 @@ import {
 export const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { onLogin, onResetPassword, error, isLoadingAuth } = useContext(AuthenticationContext);
+  const { onLogin, onResetPassword, error, isLoadingAuth, onGoBack } = useContext(AuthenticationContext);
   
+
   return (
     <AccountBackground>
       <AccountCover />
@@ -55,7 +56,7 @@ export const LoginScreen = ({ navigation }) => {
         </Spacer>
         {error && (
           <Spacer size="large">
-            <Text variant="error" style={{color: 'red'}}>Please enter valid login data</Text>
+            <Text variant="error" style={{color: 'red'}}>{error.includes('verified') ? 'Please verify your e-mail' : 'Please enter valid data'}</Text>
           </Spacer>
         )}
         <Spacer size="large">
@@ -85,7 +86,7 @@ export const LoginScreen = ({ navigation }) => {
         <BackButton
             icon="arrow-left"
             mode="contained"
-            onPress={() => navigation.goBack()}
+            onPress={() => onGoBack(navigation)}
         >
             BACK
         </BackButton>

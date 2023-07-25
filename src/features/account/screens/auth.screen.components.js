@@ -30,7 +30,6 @@ export const BackButton = styled(Button)`
 `
 
 export const Loading = styled(ActivityIndicator)`
-  margin-left: -25px;
   padding: ${(props) => props.theme.space[2]}
 
 `;

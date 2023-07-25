@@ -12,12 +12,12 @@ import { initializeApp } from 'firebase/app';
 import { KeyboardDismissProvider } from "./src/global/KeyboardDismissProvider";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAnJ5A3cxhapgtkLANsIwZLAG0lciStBc4",
-  authDomain: "restaurantsapp-6355e.firebaseapp.com",
-  projectId: "restaurantsapp-6355e",
-  storageBucket: "restaurantsapp-6355e.appspot.com",
-  messagingSenderId: "802218396852",
-  appId: "1:802218396852:web:02b04c284a409ae44fdbe1"
+  apiKey: "AIzaSyB9eFV5PL3oZKOAH7rTKZdp8-KyCYZR8ss",
+  authDomain: "faunapetshopapp.firebaseapp.com",
+  projectId: "faunapetshopapp",
+  storageBucket: "faunapetshopapp.appspot.com",
+  messagingSenderId: "493385495540",
+  appId: "1:493385495540:web:29ae9f2ede20643907ffa1"
 };
 
 const app = initializeApp(firebaseConfig);

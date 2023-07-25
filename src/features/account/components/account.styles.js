@@ -3,7 +3,7 @@ import { colors } from '../../../infrastructure/theme/colors'
 import { Button, TextInput, Text } from 'react-native-paper'
 
 export const AccountBackground = styled.ImageBackground.attrs({
-    source: require('../../../../assets/home_image.jpg'),
+    source: require('../../../../assets/home_image.png'),
 })`
     flex: 1;
     background-color: #ddd;
@@ -19,10 +19,8 @@ export const AccountCover = styled.View`
 `
 
 export const AccountContainer = styled.View`
-    background-color: rgba(255,255,255,0.7);
-    padding: ${(props) => props.theme.space[4]};
-    margin-top: ${(props) => props.theme.space[2]};
-    border-radius: 10px;
+    margin-top: ${(props) => props.theme.space[4]};
+    
 `
 
 export const AuthButton = styled(Button)`

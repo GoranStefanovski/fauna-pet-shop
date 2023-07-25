@@ -126,6 +126,11 @@ export const AuthenticationContextProvider = ({ children }) => {
     }
   }
 
+  const onGoBack = (navigation) => {
+    navigation.goBack()
+    setError(null);
+  }
+
   return (
     <AuthenticationContext.Provider
       value={{
@@ -137,7 +142,8 @@ export const AuthenticationContextProvider = ({ children }) => {
         onRegister,
         onLogOut,
         onContinueAsGuest,
-        onResetPassword
+        onResetPassword,
+        onGoBack
       }}
     >
       {children}

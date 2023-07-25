@@ -17,6 +17,7 @@ const SafeView = styled(SafeAreaView)`
 
 import { RestaurantList } from "../components/restaurant-list.styles";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
+import { HeaderComponent } from "../../../components/header.component";
 
 const Loading = styled(ActivityIndicator)`
   margin-left: -25px;
@@ -40,7 +41,8 @@ export default function RestaurantsScreen({ navigation }) {
           <Loading size={50} animating={true} color='blue' />
         </LoadingContainer>
       )}
-      <SearchComponent 
+      <HeaderComponent></HeaderComponent>
+      {/* <SearchComponent 
         isFavouritesToggled={isToggled}
         onFavouritesToggle={() => setIsToggled(!isToggled)}/>
         {
@@ -49,7 +51,7 @@ export default function RestaurantsScreen({ navigation }) {
             favourites={favourites}
             onNavigate={navigation.navigate}
           />
-        }
+        } */}
         <RestaurantList 
             data={restaurantsListData }
             renderItem={({ item }) => {

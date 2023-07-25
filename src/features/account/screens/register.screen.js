@@ -23,7 +23,7 @@ export const RegisterScreen = ({ navigation }) => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const { onRegister, error, isLoading } = useContext(AuthenticationContext);
+  const { onRegister, error, isLoading, onGoBack } = useContext(AuthenticationContext);
 
   return (
     <AccountBackground>
@@ -89,7 +89,7 @@ export const RegisterScreen = ({ navigation }) => {
         <BackButton
             icon="arrow-left"
             mode="contained"
-            onPress={() => navigation.goBack()}
+            onPress={() => onGoBack(navigation)}
         >
             BACK
         </BackButton>
